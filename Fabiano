@@ -6,7 +6,7 @@ ALUNO(A): Fabiano Batista Mesquita
 DATA:  28/ 04 /2026
 Bimestre: 2º Bimestre
 DES:O aplicativo permite que o usuário digite seu nome em um campo de texto. Após clicar no botão, o sistema mostra uma saudação personalizada e verifica se o campo foi preenchido corretamente.
-************+***************************************************************
+************+**************************************************************/
 
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
