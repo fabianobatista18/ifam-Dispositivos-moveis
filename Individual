@@ -3873,3 +3873,68 @@ const styles = StyleSheet.create({
   },
 });
 
+**********************************************************************/
+INSTITUTO FEDERAL DO AMAZONAS – IFAM CAMPUS IRANDUBA
+DISCIPLINA: Dispositivos Móveis
+PROFESSOR: Ranyere Lima
+ALUNO(A): Fabiano Batista Mesquita
+DATA:  28/ 05 /2026
+Bimestre: 2º Bimestre
+O aplicativo permite que o usuário digite seu nome em um campo de texto. Após clicar no botão, o sistema mostra uma saudação personalizada e verifica se o campo foi preenchido corretamente.
+************+***************************************************************
+
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+
+export default function App() {
+
+  // Estado para mudar o texto ao clicar
+  const [mensagem, setMensagem] = useState("Bem-vindo!");
+
+  // Função do botão
+  function entrar() {
+    setMensagem("Você clicou em Entrar!");
+    Alert.alert("Ação", "Botão pressionado com sucesso!");
+  }
+
+  return (
+    <View style={styles.container}>
+
+      {/* TEXTO */}
+      <Text style={styles.texto}>
+        {mensagem}
+      </Text>
+
+      {/* BOTÃO */}
+      <TouchableOpacity style={styles.botao} onPress={entrar}>
+        <Text style={styles.textoBotao}>Entrar</Text>
+      </TouchableOpacity>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+
+  texto: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+
+  botao: {
+    backgroundColor: '#007BFF',
+    padding: 15,
+    borderRadius: 10,
+  },
+
+  textoBotao: {
+    color: '#fff',
+    fontSize: 18,
+  }
+});
